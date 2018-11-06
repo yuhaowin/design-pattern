@@ -40,4 +40,11 @@ public abstract class VideoFactory {
     //该方法只是定义一个规范
     public abstract Video getVideo();
 
+
+    /**
+     *conllection 中的iterator() 是一个工厂方法
+     *
+     * 很多子类实现iterator这个方法.如在:ArrayList,返回的是具体的iterator的对象
+     */
+
 }
