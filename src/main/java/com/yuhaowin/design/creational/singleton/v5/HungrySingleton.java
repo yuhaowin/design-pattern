@@ -1,6 +1,8 @@
-package com.yuhaowin.design.creational.singleton.v4;
+package com.yuhaowin.design.creational.singleton.v5;
 
-public class HungrySingleton {
+import java.io.Serializable;
+
+public class HungrySingleton implements Serializable {
 
     private HungrySingleton() {
     }
@@ -15,4 +17,7 @@ public class HungrySingleton {
         return hungrySingleton;
     }
 
+    private Object readResolve(){
+        return hungrySingleton;
+    }
 }
