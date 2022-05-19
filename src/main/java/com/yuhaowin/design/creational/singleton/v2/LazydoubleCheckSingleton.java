@@ -4,7 +4,7 @@ package com.yuhaowin.design.creational.singleton.v2;
 public class LazydoubleCheckSingleton {
 
     //加上volatile关键字,就不允许2 3 有重排序的可能
-    private volatile static LazydoubleCheckSingleton lazydoubleCheckSingleton = null;
+    private volatile static LazydoubleCheckSingleton lazydoubleCheckSingleton;
 
     private LazydoubleCheckSingleton() {
     }

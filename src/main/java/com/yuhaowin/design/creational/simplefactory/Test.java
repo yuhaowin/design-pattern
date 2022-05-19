@@ -40,5 +40,4 @@ public class Test {
         Video video1 = videoFactory.getVideo(JavaVideo.class);
         video1.produce();
     }
-
 }

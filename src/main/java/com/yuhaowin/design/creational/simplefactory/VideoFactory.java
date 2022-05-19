@@ -54,6 +54,5 @@ public class VideoFactory {
 
     //jdk calendar类的getInstance方法使用的简单工厂方法;
 
-    //logback LoggerFactory类的getLogger方法使用了简单工厂方法;
-
+    //logback LoggerFactory 类的 getLogger方法使用了简单工厂方法; ILoggerFactory 的实现
 }

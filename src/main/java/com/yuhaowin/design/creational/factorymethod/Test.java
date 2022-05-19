@@ -28,9 +28,5 @@ public class Test {
         VideoFactory videoFactory1 = new JavaVideoFactory();
         Video video1 = videoFactory1.getVideo();
         video1.produce();
-
-        System.out.println("trafficThreshold".equalsIgnoreCase("trafficthreshold"));
-
     }
-
 }
