@@ -2,7 +2,7 @@ package com.yuhaowin.design.structure.proxy.staticproxy;
 
 import com.yuhaowin.design.structure.proxy.OrderService;
 import com.yuhaowin.design.structure.proxy.Order;
-import com.yuhaowin.design.structure.proxy.OrderSercviceImpl;
+import com.yuhaowin.design.structure.proxy.OrderServiceImpl;
 import com.yuhaowin.design.structure.proxy.db.DataSourceContextHolder;
 
 /**
@@ -17,28 +17,29 @@ public class OrderServiceStaticProxy {
 
     public int saveOrder(Order order) {
         beforeMethod(order);
-        iOrderService = new OrderSercviceImpl();
+        iOrderService = new OrderServiceImpl();
 
 //        Integer userId = order.getUserId();
 //        Integer dbRouter = userId % 2;
 //        System.out.println("静态代理分配到 [db"+dbRouter+"] 处理数据");
 //        //设置dataSource
 //        DataSourceContextHolder.setDBType("db"+dbRouter);
+
         int result = iOrderService.saveOrder(order);
         afterMethod();
         return result;
     }
 
-    private void beforeMethod(Order order){
+    private void beforeMethod(Order order) {
         System.out.println("静态代理before code");
         Integer userId = order.getUserId();
         Integer dbRouter = userId % 2;
-        System.out.println("静态代理分配到 [db"+dbRouter+"] 处理数据");
+        System.out.println("静态代理分配到 [db" + dbRouter + "] 处理数据");
         //设置dataSource
-        DataSourceContextHolder.setDBType("db"+dbRouter);
+        DataSourceContextHolder.setDBType("db" + dbRouter);
     }
 
-    private void afterMethod(){
+    private void afterMethod() {
         System.out.println("静态代理after code");
     }
 }

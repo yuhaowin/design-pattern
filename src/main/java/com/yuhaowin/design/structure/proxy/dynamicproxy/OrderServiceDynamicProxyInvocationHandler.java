@@ -7,14 +7,14 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class OrderServiceDynamicProxy implements InvocationHandler {
+public class OrderServiceDynamicProxyInvocationHandler implements InvocationHandler {
 
     /**
      * 被代理的目标对象 这里是 OrderServiceImpl
      */
     private Object target;
 
-    public OrderServiceDynamicProxy(Object target) {
+    public OrderServiceDynamicProxyInvocationHandler(Object target) {
         this.target = target;
     }
 
@@ -43,6 +43,7 @@ public class OrderServiceDynamicProxy implements InvocationHandler {
         beforeMethod(argObject);
         Object resultObject = method.invoke(target, args);
         afterMethod();
+        System.out.println(proxy.getClass().getName());
         return resultObject;
     }
 
