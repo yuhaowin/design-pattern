@@ -19,3 +19,9 @@
 观察者之间有过多的细节依赖,提高了时间的消耗,和程序的复杂度.
 
 使用要得当,避免循环调用.
+
+
+观察者模式，涉及两个对象，Observable 和 Observer， 1 对 N 的关系，Observable 发生变化调用 update 通知到多个 Observer
+
+监听器模式，和观察者类似，涉及三个对象，EventSource、Event、Listener，Listener 等同与 Observer，EventSource 帮助建立 Event 和 Listener 联系
+EventSource 持有多个 Listener，把 Event 推送给多个 Listener。
