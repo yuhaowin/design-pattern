@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class HungrySingleton implements Serializable {
 
+    private final static HungrySingleton hungrySingleton = new HungrySingleton();
+
     private HungrySingleton() {
     }
-
-    private final static HungrySingleton hungrySingleton = new HungrySingleton();
 
 //    static {
 //        hungrySingleton = new HungrySingleton();

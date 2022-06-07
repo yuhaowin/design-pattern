@@ -4,13 +4,13 @@ import java.io.Serializable;
 
 public class HungrySingleton implements Serializable {
 
+    private final static HungrySingleton hungrySingleton = new HungrySingleton();
+
     private HungrySingleton() {
         if (hungrySingleton != null) {
             throw new RuntimeException("单例禁止反射调用构造器");
         }
     }
-
-    private final static HungrySingleton hungrySingleton = new HungrySingleton();
 
 //    static {
 //        hungrySingleton = new HungrySingleton();

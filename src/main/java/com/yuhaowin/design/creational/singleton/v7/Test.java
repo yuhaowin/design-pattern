@@ -17,10 +17,10 @@ public class Test {
 
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
 
-        EnumSingleton newinstance = (EnumSingleton) ois.readObject();
+        EnumSingleton newInstance = (EnumSingleton) ois.readObject();
 
         System.out.println(instance);
-        System.out.println(newinstance);
-        System.out.println(instance == newinstance);
+        System.out.println(newInstance);
+        System.out.println(instance == newInstance);
     }
 }
