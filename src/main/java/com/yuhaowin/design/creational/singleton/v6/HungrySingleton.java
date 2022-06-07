@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class HungrySingleton implements Serializable {
 
     private HungrySingleton() {
-        if (hungrySingleton != null){
+        if (hungrySingleton != null) {
             throw new RuntimeException("单例禁止反射调用构造器");
         }
     }
@@ -20,7 +20,7 @@ public class HungrySingleton implements Serializable {
         return hungrySingleton;
     }
 
-    private Object readResolve(){
+    private Object readResolve() {
         return hungrySingleton;
     }
 }

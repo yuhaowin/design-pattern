@@ -22,6 +22,5 @@ public class Test {
         System.out.println(instance);
         System.out.println(newinstance);
         System.out.println(instance == newinstance);
-
     }
 }

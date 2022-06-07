@@ -17,7 +17,7 @@ public class HungrySingleton implements Serializable {
         return hungrySingleton;
     }
 
-    private Object readResolve(){
+    private Object readResolve() {
         return hungrySingleton;
     }
 }

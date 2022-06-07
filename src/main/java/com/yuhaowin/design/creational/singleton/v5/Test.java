@@ -19,6 +19,5 @@ public class Test {
         HungrySingleton newinstance = (HungrySingleton) ois.readObject();
 
         System.out.println(instance == newinstance);
-
     }
 }

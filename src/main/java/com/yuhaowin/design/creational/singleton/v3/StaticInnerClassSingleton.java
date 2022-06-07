@@ -1,6 +1,5 @@
 package com.yuhaowin.design.creational.singleton.v3;
 
-
 /**
  *
  */
@@ -13,7 +12,7 @@ public class StaticInnerClassSingleton {
         private static StaticInnerClassSingleton staticInnerClassSingleton = new StaticInnerClassSingleton();
     }
 
-    public static StaticInnerClassSingleton getInstance(){
+    public static StaticInnerClassSingleton getInstance() {
         return InnerClass.staticInnerClassSingleton;
     }
 }
