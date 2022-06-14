@@ -1,6 +1,7 @@
 package com.yuhaowin.design.creational.prototype;
 
-public class Mail implements Cloneable{
+public class Mail implements Cloneable {
+
     private String name;
     private String emailAddress;
     private String content;
